@@ -14,6 +14,12 @@ urlpatterns = [
     path(r'topics/', views.topics, name='topics'),
 
     # 特定主题的详细页面
-    path(r'topics/<topic_id>/', views.topic, name='topic')
-    #re_path('topics/(?P<topic_id>\d+)/', views.topic, name='topic')
+    path(r'topics/<topic_id>/', views.topic, name='topic'),
+
+    # 用于添加新主题的网页
+    path(r'new_topic/', views.new_topic, name='new_topic'),
+
+    # 用于添加新条目的页面
+    path(r'new_entry/<topic_id>/', views.new_entry, name='new_entry'),
+
 ]
